@@ -17,9 +17,11 @@ export const projects: Project[] = [
   },
   {
     title: "Punter's Journal",
-    // TODO: Jay hasn't described this project yet — add a real description
-    description: '',
-    tags: [],
+    description:
+      "Bet tracking and performance analytics SaaS for Australian horse racing punters — helps them treat betting like a discipline instead of a habit. Logs all major bet types (win, place, each-way, multis, exotics, lays) with automatic P&L calculations, a dashboard tracking strike rate, ROI, POT%, turnover, and streaks, and AI-powered insights that surface personalized patterns in a user's own betting history. Tiered subscription model (Free/Pro/Elite) with Stripe billing and usage-based feature gating. Founder and sole developer, covering product design, the full-stack build, database schema, payments integration, and go-to-market. Live in production with paying customers, grown organically out of the Wolfden Australian racing community.",
+    tags: ['Next.js', 'TypeScript', 'Supabase', 'Stripe', 'Vercel', 'Tailwind CSS'],
+    // TODO: add GitHub repo URL once confirmed
+    // TODO: add production live URL
   },
   {
     title: 'OnTrack',
