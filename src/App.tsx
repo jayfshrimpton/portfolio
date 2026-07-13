@@ -1,17 +1,18 @@
+import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import HeroSection from './sections/HeroSection'
-import ProjectsSection from './sections/ProjectsSection'
-import SkillsSection from './sections/SkillsSection'
-import ContactSection from './sections/ContactSection'
+import Home from './pages/Home'
+import McpServersCaseStudy from './pages/McpServersCaseStudy'
+import CommonplaceCaseStudy from './pages/CommonplaceCaseStudy'
 
 function App() {
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/mcp-servers-it-support" element={<McpServersCaseStudy />} />
+        <Route path="/projects/commonplace" element={<CommonplaceCaseStudy />} />
+      </Routes>
     </>
   )
 }

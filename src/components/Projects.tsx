@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { projects } from '../data/projects'
 
 export default function Projects() {
@@ -22,8 +23,16 @@ export default function Projects() {
               ))}
             </div>
           )}
-          {(project.github || project.live) && (
+          {(project.github || project.live || project.slug) && (
             <div className="mt-2 flex gap-4">
+              {project.slug && (
+                <Link
+                  to={`/projects/${project.slug}`}
+                  className="text-sm font-medium text-gray-900 hover:underline"
+                >
+                  Read case study →
+                </Link>
+              )}
               {project.github && (
                 <a
                   href={project.github}

@@ -4,15 +4,24 @@ export interface Project {
   tags: string[]
   github?: string
   live?: string
+  slug?: string
 }
 
 export const projects: Project[] = [
+  {
+    title: 'Building MCP Servers to Automate an IT Support Role',
+    description:
+      'Three MCP servers built solo to remove the repetitive lookup work behind a 350-machine, 25+ site IT support role — from a first attempt at a RAG chatbot to read-only search and asset lookup tools, up to a ticketing server that can act on live systems behind a human confirmation gate.',
+    tags: ['Python', 'FastAPI', 'Pandas', 'MCP (Model Context Protocol)', 'Freshservice API', 'Claude'],
+    slug: 'mcp-servers-it-support',
+  },
   {
     title: 'Commonplace',
     description:
       'Knowledge management platform for Australian engineering and construction SMEs — helps teams capture, structure, and retrieve institutional knowledge. AI-powered document structuring (Gemini), document expiry/review reminders, role-based access control, an MCP connector for AI agents, org brand styles, and scheduled notifications.',
     tags: ['React', 'TypeScript', 'Express', 'Node.js', 'Supabase', 'Tailwind CSS'],
     github: 'https://github.com/jayfshrimpton/knowledge-capture',
+    slug: 'commonplace',
     // TODO: add Vercel live URL once known
   },
   {
