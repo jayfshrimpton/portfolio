@@ -4,26 +4,49 @@ export default function Projects() {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => (
-        <a
+        <div
           key={project.title}
-          href={project.link}
-          target="_blank"
-          rel="noreferrer"
-          className="flex flex-col gap-2 rounded-lg border border-gray-200 p-5 hover:border-gray-400"
+          className="flex flex-col gap-2 rounded-lg border border-gray-200 p-5"
         >
           <h3 className="font-semibold text-gray-900">{project.title}</h3>
           <p className="text-sm text-gray-600">{project.description}</p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </a>
+          {project.tags.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+          {(project.github || project.live) && (
+            <div className="mt-2 flex gap-4">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-medium text-gray-900 hover:underline"
+                >
+                  GitHub
+                </a>
+              )}
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-medium text-gray-900 hover:underline"
+                >
+                  Live
+                </a>
+              )}
+            </div>
+          )}
+        </div>
       ))}
     </div>
   )

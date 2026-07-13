@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-200 bg-white/80 px-6 py-4 backdrop-blur">
       <a href="#hero" className="text-lg font-semibold text-gray-900">
-        Your Name
+        Jay Shrimpton
       </a>
       <ul className="flex gap-6">
         {links.map((link) => (

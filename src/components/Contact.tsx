@@ -4,12 +4,22 @@ export default function Contact() {
       <p className="text-gray-600">
         Interested in working together? Reach out below.
       </p>
-      <a
-        href="mailto:you@example.com"
-        className="rounded-md bg-gray-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-700"
-      >
-        you@example.com
-      </a>
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <a
+          href="mailto:jayfshrimpton@gmail.com"
+          className="rounded-md bg-gray-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-700"
+        >
+          jayfshrimpton@gmail.com
+        </a>
+        <a
+          href="https://github.com/jayfshrimpton"
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-md border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 hover:border-gray-400"
+        >
+          GitHub
+        </a>
+      </div>
     </div>
   )
 }
