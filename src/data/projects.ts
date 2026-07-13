@@ -33,10 +33,10 @@ export const projects: Project[] = [
     live: 'https://www.puntersjournal.com.au/',
   },
   {
-    title: 'OnTrack',
+    title: 'OnTrack (Doubtfire)',
     description:
-      'Contribution to a mature open-source full-stack codebase as part of a university capstone project. Role: Full Stack Developer.',
-    // TODO: add tech stack, what OnTrack does, and a link once Jay provides more info
-    tags: [],
+      'Learning Management System for skill-based course delivery, connecting tutors and students with rapid weekly feedback on their work. Used in production at Deakin University and other universities worldwide — a real, actively-used product, not a toy project. Contributing as part of a university capstone project structured as a real engineering team, with students embedded in real roles on a live codebase. Role: Senior Full Stack Developer. Contributions in progress — beginning soon.',
+    tags: ['TypeScript', 'Angular', 'Ruby on Rails', 'Docker'],
+    github: 'https://github.com/thoth-tech',
   },
 ]
