@@ -11,34 +11,31 @@ interface CaseStudyLayoutProps {
 
 export default function CaseStudyLayout({ title, subtitle, tags, github, children }: CaseStudyLayoutProps) {
   return (
-    <article className="mx-auto max-w-2xl px-6 py-16">
-      <Link to="/#projects" className="text-sm font-medium text-gray-500 hover:text-gray-900">
-        ← Back to projects
+    <main id="main-content" className="case-study-page">
+      <Link to="/#projects" className="case-study-back" data-cursor="Back">
+        <span aria-hidden="true">←</span> Back to selected work
       </Link>
 
-      <h1 className="mt-6 text-3xl font-bold text-gray-900">{title}</h1>
-      <p className="mt-3 text-lg text-gray-600">{subtitle}</p>
+      <article>
+        <header className="case-study-header">
+          <h1>{title}</h1>
+          <p>{subtitle}</p>
 
-      <div className="mt-5 flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span key={tag} className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
-            {tag}
-          </span>
-        ))}
-      </div>
+          <div className="case-study-tags" aria-label="Technologies used">
+            {tags.map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </div>
 
-      {github && (
-        <a
-          href={github}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-4 inline-block text-sm font-medium text-gray-900 hover:underline"
-        >
-          GitHub →
-        </a>
-      )}
+          {github && (
+            <a className="case-study-github" href={github} target="_blank" rel="noreferrer" data-cursor="Code">
+              View source <span aria-hidden="true">↗</span>
+            </a>
+          )}
+        </header>
 
-      <div className="prose-case-study mt-10 flex flex-col gap-8">{children}</div>
-    </article>
+        <div className="case-study-body">{children}</div>
+      </article>
+    </main>
   )
 }

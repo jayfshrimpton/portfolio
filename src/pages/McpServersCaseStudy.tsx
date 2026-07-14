@@ -1,5 +1,5 @@
 import CaseStudyLayout from './CaseStudyLayout'
-import ArchitectureDiagram from '../components/ArchitectureDiagram'
+import { ArchitectureDiagram } from '../components/ArchitectureDiagram'
 
 const tags = ['Python', 'FastAPI', 'Pandas', 'MCP (Model Context Protocol)', 'Freshservice API', 'Claude']
 

@@ -1,32 +1,27 @@
-# React + TypeScript + Vite
+# Jay Shrimpton — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An immersive single-page portfolio built with React, TypeScript, GSAP, Three.js, Lenis, and Tailwind CSS. A persistent WebGL scene evolves through the page while GSAP ScrollTrigger coordinates the camera, section reveals, and project storytelling.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+The animation dependencies were installed with:
+
+```bash
+npm install gsap three lenis
+npm install --save-dev @types/three
+```
+
+## Production checks
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+The interface includes responsive layouts, keyboard-visible focus states, a WebGL fallback, lazy-loaded 3D and case-study bundles, and a reduced-motion mode that removes smooth scrolling and entrance choreography.

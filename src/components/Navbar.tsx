@@ -1,25 +1,37 @@
-const links = [
-  { label: 'Home', href: '/#hero' },
-  { label: 'Projects', href: '/#projects' },
-  { label: 'Skills', href: '/#skills' },
-  { label: 'Contact', href: '/#contact' },
-]
+import { Link } from 'react-router-dom'
 
-export default function Navbar() {
+const links = [
+  { label: 'Projects', href: '/#projects' },
+  { label: 'OnTrack', href: '/#ontrack' },
+  { label: 'Stack', href: '/#skills' },
+  { label: 'Contact', href: '/#contact' },
+] as const
+
+export function Navbar() {
   return (
-    <nav className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-200 bg-white/80 px-6 py-4 backdrop-blur">
-      <a href="/#hero" className="text-lg font-semibold text-gray-900">
-        Jay Shrimpton
-      </a>
-      <ul className="flex gap-6">
-        {links.map((link) => (
-          <li key={link.href}>
-            <a href={link.href} className="text-sm text-gray-600 hover:text-gray-900">
-              {link.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <header className="site-header" data-nav-item>
+      <Link className="site-mark" to="/#hero" aria-label="Jay Shrimpton, home" data-cursor="Home">
+        <span>J</span>
+        <span>S</span>
+      </Link>
+
+      <p className="site-status">
+        <span className="status-dot" /> Full-stack developer
+      </p>
+
+      <nav aria-label="Primary navigation">
+        <ul className="nav-list">
+          {links.map((link) => (
+            <li key={link.href}>
+              <Link to={link.href} data-cursor="Go">
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <span id="scroll-progress" className="scroll-progress" />
+    </header>
   )
 }
